@@ -2,7 +2,7 @@
 
 Homebrew tap for the [neuroplastio](https://github.com/neuroplastio) org's tools.
 
-`brew tap neuroplastio/kubecom`
+`brew tap neuroplastio/tap`
 
 | Tool | Cask | Status |
 | ---- | ---- | ------ |
@@ -16,7 +16,7 @@ sha256 of a real release artifact, so it cannot exist until the first
 `v1.x.x` tag is pushed. Until then:
 
 ```bash
-brew tap neuroplastio/kubecom   # works now
+brew tap neuroplastio/tap   # works now
 brew install --cask kubecom      # "no cask found" until the first tagged release
 ```
 
