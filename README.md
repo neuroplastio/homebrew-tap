@@ -37,5 +37,5 @@ brew install --cask neuroplastio/tap/hottyterm
 The macOS app of each [hottyterm release](https://github.com/neuroplastio/hottyterm/releases),
 for Apple silicon. `Casks/hottyterm.rb` is rendered from
 `packaging/homebrew/` in its repository; change it there. The app is signed
-ad hoc, not notarized, so macOS blocks its first launch until it is allowed in
-System Settings, Privacy & Security. Linux users take the release's tarball.
+ad hoc, not notarized; the cask takes macOS's quarantine off it, so it opens
+without asking. Linux users take the release's tarball.
