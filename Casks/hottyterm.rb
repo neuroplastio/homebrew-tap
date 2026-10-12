@@ -10,8 +10,8 @@
 # off (Ghostty's feed would replace it with Ghostty), so `brew upgrade`
 # updates it.
 cask "hottyterm" do
-  version "26.10.11-dev.26518ec"
-  sha256 "9f334a5f151e62178aa9232e2228dac00169e86eb61124565971d055eabfa4b5"
+  version "26.10.12-dev.0820876"
+  sha256 "a07fa3aa64ea7249ae85abeebce91c128bd72a0148ada8187942da6cffd1da25"
 
   url "https://github.com/neuroplastio/hottyterm/releases/download/#{version}/hottyterm-#{version}-macos-arm64.zip"
   name "hottyterm"
