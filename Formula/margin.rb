@@ -12,32 +12,32 @@ class Margin < Formula
   license "Apache-2.0"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/neuroplastio/margin/releases/download/26.10.22/margin-launcher_darwin_arm64"
-    sha256 "4fc88e37fd89f04bb1d834a4041c18a5b07f72a2029796859415602af6d4003f"
+    url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin-launcher_darwin_arm64"
+    sha256 "7b0ef02d3cd6cf18980ef1dc1be07e3a2d63e27feae75d04016e9adc8d7da65a"
     resource "seed" do
-      url "https://github.com/neuroplastio/margin/releases/download/26.10.22/margin_darwin_arm64"
-      sha256 "169e7adff7a666604d80d0138db0dbb5b04e7158eee4a5c219d203ac4b671dc5"
+      url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin_darwin_arm64"
+      sha256 "f09e1b09af6dcafbb2872aaba24f10b2c0abc961bf8a174a9d79231508901a47"
     end
   elsif OS.mac?
-    url "https://github.com/neuroplastio/margin/releases/download/26.10.22/margin-launcher_darwin_amd64"
-    sha256 "90ac9165ac45d697b5698aeba1787e77cdab7587cf184338e8021c3ca34639fe"
+    url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin-launcher_darwin_amd64"
+    sha256 "dc49bcf2de61bb9df8651def9dfecb147cb3cde951c544cbccec933fcab22bbc"
     resource "seed" do
-      url "https://github.com/neuroplastio/margin/releases/download/26.10.22/margin_darwin_amd64"
-      sha256 "1d6edc35b88a9baf54c5445c40c6bb25f967fcbedb4865cb00c444f12979fef7"
+      url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin_darwin_amd64"
+      sha256 "a46576478d287892bb2409ba9b6af30ab3ca21ea90d686fd5380bcbad983eee7"
     end
   elsif Hardware::CPU.arm?
-    url "https://github.com/neuroplastio/margin/releases/download/26.10.22/margin-launcher_linux_arm64"
-    sha256 "554e3609475406fc63ad0f9e52b926fdf65e0a71a7075c2f83ef41f485ef409b"
+    url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin-launcher_linux_arm64"
+    sha256 "f7d966bc7ba94dbea0028d41403d65f1d5c7d3d016a492df4ec1a109e6b20ee8"
     resource "seed" do
-      url "https://github.com/neuroplastio/margin/releases/download/26.10.22/margin_linux_arm64"
-      sha256 "5454fae4e4cb512f308a46e82bc07a554f04e76a2fde5d7f2f8c4bc7649348e4"
+      url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin_linux_arm64"
+      sha256 "53bd8befeb2421b9891a8b58e490dbef74bf22df8dfdcc4919bba81af7cb064e"
     end
   else
-    url "https://github.com/neuroplastio/margin/releases/download/26.10.22/margin-launcher_linux_amd64"
-    sha256 "5ca5de859e092c6ec91ccd69876e3f191ac6b643b185dc33f46cf524c9f867ef"
+    url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin-launcher_linux_amd64"
+    sha256 "ec1eae5192686eda6539e5cac7bbd5fa1b635b6b0e0c174052fa5c80e38b9ef0"
     resource "seed" do
-      url "https://github.com/neuroplastio/margin/releases/download/26.10.22/margin_linux_amd64"
-      sha256 "825c7bae4f082228ec8e6c8940ea117d5cbce093944462f4f7e3588d8a07a0b4"
+      url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin_linux_amd64"
+      sha256 "e3dd8db23eb85077605a024655643b6a599398cd3101ddae58dd8412df7eba9e"
     end
   end
 
@@ -57,10 +57,10 @@ class Margin < Formula
       #!/bin/sh
       home="$HOME/.local/margin"
       if [ ! -e "$home/bin/margin" ]; then
-        mkdir -p "$home/builds/a0d5c31c0362fd2bd61acb116e7a9e94c8ff1c64"
-        cp "#{opt_libexec}/margin-seed/margin" "$home/builds/a0d5c31c0362fd2bd61acb116e7a9e94c8ff1c64/margin"
-        chmod +x "$home/builds/a0d5c31c0362fd2bd61acb116e7a9e94c8ff1c64/margin"
-        ln -sfn "builds/a0d5c31c0362fd2bd61acb116e7a9e94c8ff1c64" "$home/bin"
+        mkdir -p "$home/builds/4bfad227957e207cfa1dec82423333b17051a83c"
+        cp "#{opt_libexec}/margin-seed/margin" "$home/builds/4bfad227957e207cfa1dec82423333b17051a83c/margin"
+        chmod +x "$home/builds/4bfad227957e207cfa1dec82423333b17051a83c/margin"
+        ln -sfn "builds/4bfad227957e207cfa1dec82423333b17051a83c" "$home/bin"
       fi
       exec "#{opt_libexec}/margin-launcher" "$@"
     SH
