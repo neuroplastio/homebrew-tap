@@ -7,37 +7,37 @@
 # network and survives a channel outage; `margin update` then updates the copy
 # in the home, outside the package manager.
 class Margin < Formula
-  desc "Terminal tool to review markdown and hand comments back to an agent (hotty 0.5)"
+  desc "Terminal tool to review markdown and hand comments back to an agent (hotty 0.6)"
   homepage "https://github.com/neuroplastio/margin"
   license "Apache-2.0"
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin-launcher_darwin_arm64"
-    sha256 "7b0ef02d3cd6cf18980ef1dc1be07e3a2d63e27feae75d04016e9adc8d7da65a"
+    url "https://github.com/neuroplastio/margin/releases/download/26.11.05/margin-launcher_darwin_arm64"
+    sha256 "ece89772ef9e346ca380e19138ce37f5c9a60008b12c374a482e712773ec1b5f"
     resource "seed" do
-      url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin_darwin_arm64"
-      sha256 "f09e1b09af6dcafbb2872aaba24f10b2c0abc961bf8a174a9d79231508901a47"
+      url "https://github.com/neuroplastio/margin/releases/download/26.11.05/margin_darwin_arm64"
+      sha256 "354e79cc8c8a91de01522d595f904f7fe5b983c01c7814ef3589ad8fe5c25662"
     end
   elsif OS.mac?
-    url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin-launcher_darwin_amd64"
-    sha256 "dc49bcf2de61bb9df8651def9dfecb147cb3cde951c544cbccec933fcab22bbc"
+    url "https://github.com/neuroplastio/margin/releases/download/26.11.05/margin-launcher_darwin_amd64"
+    sha256 "18ee426e76d0c474b2a9d44a3b1b55de29e7ced6bfd85489299798f59976a488"
     resource "seed" do
-      url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin_darwin_amd64"
-      sha256 "a46576478d287892bb2409ba9b6af30ab3ca21ea90d686fd5380bcbad983eee7"
+      url "https://github.com/neuroplastio/margin/releases/download/26.11.05/margin_darwin_amd64"
+      sha256 "6c03461f5ee047582080e8072191ff0f905c249ef62d0b750f6d43a3c1daa5de"
     end
   elsif Hardware::CPU.arm?
-    url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin-launcher_linux_arm64"
-    sha256 "f7d966bc7ba94dbea0028d41403d65f1d5c7d3d016a492df4ec1a109e6b20ee8"
+    url "https://github.com/neuroplastio/margin/releases/download/26.11.05/margin-launcher_linux_arm64"
+    sha256 "55810119923e803ff642080bd06faa3219a0d60943a3c7fc34254e7e5f00f78c"
     resource "seed" do
-      url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin_linux_arm64"
-      sha256 "53bd8befeb2421b9891a8b58e490dbef74bf22df8dfdcc4919bba81af7cb064e"
+      url "https://github.com/neuroplastio/margin/releases/download/26.11.05/margin_linux_arm64"
+      sha256 "fc9e4701ef48b52b4012e86f0d08de1954b366e02e8f1b5b1f8b8749d2a23e28"
     end
   else
-    url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin-launcher_linux_amd64"
-    sha256 "ec1eae5192686eda6539e5cac7bbd5fa1b635b6b0e0c174052fa5c80e38b9ef0"
+    url "https://github.com/neuroplastio/margin/releases/download/26.11.05/margin-launcher_linux_amd64"
+    sha256 "b215456a5e6caf3a99c8f466d10290a1083194f88014f8711df19dd24a6f75db"
     resource "seed" do
-      url "https://github.com/neuroplastio/margin/releases/download/26.10.23/margin_linux_amd64"
-      sha256 "e3dd8db23eb85077605a024655643b6a599398cd3101ddae58dd8412df7eba9e"
+      url "https://github.com/neuroplastio/margin/releases/download/26.11.05/margin_linux_amd64"
+      sha256 "49e7d3acbf1d2ac9410ad7f7bf1ca5a0201647339aa42cf9fd5178a526cad7be"
     end
   end
 
@@ -57,10 +57,10 @@ class Margin < Formula
       #!/bin/sh
       home="$HOME/.local/margin"
       if [ ! -e "$home/bin/margin" ]; then
-        mkdir -p "$home/builds/4bfad227957e207cfa1dec82423333b17051a83c"
-        cp "#{opt_libexec}/margin-seed/margin" "$home/builds/4bfad227957e207cfa1dec82423333b17051a83c/margin"
-        chmod +x "$home/builds/4bfad227957e207cfa1dec82423333b17051a83c/margin"
-        ln -sfn "builds/4bfad227957e207cfa1dec82423333b17051a83c" "$home/bin"
+        mkdir -p "$home/builds/fb872dc923ce5452cd9c52f682888109391475f0"
+        cp "#{opt_libexec}/margin-seed/margin" "$home/builds/fb872dc923ce5452cd9c52f682888109391475f0/margin"
+        chmod +x "$home/builds/fb872dc923ce5452cd9c52f682888109391475f0/margin"
+        ln -sfn "builds/fb872dc923ce5452cd9c52f682888109391475f0" "$home/bin"
       fi
       exec "#{opt_libexec}/margin-launcher" "$@"
     SH
